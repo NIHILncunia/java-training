@@ -71,5 +71,7 @@ public class tr1Variable {
     
     // primitive DataType 은 기본형 타입이라고 부르고 값을 저장할 때 실제 값을 저장한다.
     // reference DataType 은 참조형 타입이라고 부르고 값을 저장할 때에 값의 참조값을 저장한다.
+    
+    // 변수들은 재할당이 가능하다. 하지만 final 이라는 키워드가 붙게 되면 재할당이 불가능해진다.
   }
 }

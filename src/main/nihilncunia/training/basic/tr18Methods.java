@@ -29,6 +29,12 @@ public class tr18Methods {
     // 매개변수가 없는 대신에 인스턴스에서 사용할 변수는 만들어줘야한다.
     
     System.out.println(Test.add(5));
+    
+    System.out.println(add(1, 2, 5));
+    System.out.println(add(1, 2));
+    System.out.println(add(2.5, 5.8));
+    // 이렇게 같은 메소드여도 다르게 작용한다. 아니, 사실상 같은 메소드가 아닌 것이다.
+    // 같은 이름을 가졌지만 다르게 생긴 것들이 왜 그런건지 이제 그 이유를 알게 되었다.
   }
   
   static void hello(String word) {
@@ -37,6 +43,25 @@ public class tr18Methods {
     // 그런데, void의 경우엔 리턴값이 없는 메소드를 만들 때 쓴다.
     // 괄호에는 매개변수를 넣어서 메소드를 좀 더 의미 있게 만들 수 있다.
   }
+  
+  static int add(int a, int b) {
+    return a + b;
+  }
+  
+  static int add(int a, int b, int c) {
+    return a + b + c;
+  }
+  
+  // 이름이 같은 메소드라고 할 지라도 매개변수의 개수가 다르면 같은 것으로 치지 않는다.
+  // 이를 오버로딩이라고 한다. 오버로딩은 경우에 따라서 사용하기 위해 존재한다.
+  
+  static double add(double a, double b) {
+    return a + b;
+  }
+  
+  // 리턴되는 타입이 달라도 된다. 하지만, 리턴되는 타입만 다르고 매개변수가 같다면
+  // 그것은 오버로딩이 적용되지 않는다. 즉, 같은 메소드로 인식하게 되는 것이다.
+  // 메소드의 아이덴티티는 결국 이름과 매개변수가 한 세트라고 할 수 있겠다.
 }
 
 class Test {
